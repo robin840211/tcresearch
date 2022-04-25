@@ -1,7 +1,10 @@
 $(function(){
 	var latest_version = "5.2";
 	$.each(version_dictionary, function(key,version){
-		$("#version").append("<option value="+key+">"+key+"</option>");
+		var $opt = $('<option>');
+		$opt.val(key).text(key);
+		$opt.appendTo('#version');
+		// $("#version").append("<option value="+key+">"+key+"</option>");
 	});
 	var aspects = [];
 	var addon_aspects;
